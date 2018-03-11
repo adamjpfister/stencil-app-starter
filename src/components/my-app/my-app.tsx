@@ -21,6 +21,9 @@ export class MyApp {
 
             <stencil-route url='/profile/:name' component='app-profile'>
             </stencil-route>
+
+            <stencil-route url='/map' component='app-map'>
+            </stencil-route>
           </stencil-router>
         </main>
       </div>

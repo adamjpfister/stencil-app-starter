@@ -22,6 +22,12 @@ export class AppHome {
             Profile page
           </button>
         </stencil-route-link>
+
+        <stencil-route-link url='/map'>
+          <button>
+            Map page
+          </button>
+        </stencil-route-link>
       </div>
     );
   }

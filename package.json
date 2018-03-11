@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "@stencil/core": "^0.6.1",
-    "@stencil/router": "latest"
+    "@stencil/router": "latest",
+    "@types/arcgis-js-api": "^4.6.0",
+    "esri-loader": "^2.2.0"
   },
   "devDependencies": {
     "@stencil/dev-server": "latest",

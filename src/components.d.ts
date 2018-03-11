@@ -48,6 +48,36 @@ declare global {
 
 
 import {
+  AppMap as AppMap
+} from './components/app-map/app-map';
+
+declare global {
+  interface HTMLAppMapElement extends AppMap, HTMLStencilElement {
+  }
+  var HTMLAppMapElement: {
+    prototype: HTMLAppMapElement;
+    new (): HTMLAppMapElement;
+  };
+  interface HTMLElementTagNameMap {
+    "app-map": HTMLAppMapElement;
+  }
+  interface ElementTagNameMap {
+    "app-map": HTMLAppMapElement;
+  }
+  namespace JSX {
+    interface IntrinsicElements {
+      "app-map": JSXElements.AppMapAttributes;
+    }
+  }
+  namespace JSXElements {
+    export interface AppMapAttributes extends HTMLAttributes {
+      
+    }
+  }
+}
+
+
+import {
   AppProfile as AppProfile
 } from './components/app-profile/app-profile';
 
