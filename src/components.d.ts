@@ -18,69 +18,6 @@ declare global {
   interface HTMLAttributes {}
 }
 
-import 'ionicons';
-import '@ionic/core';
-
-
-import {
-  AppMap as AppMap
-} from './components/app-map/app-map';
-
-declare global {
-  interface HTMLAppMapElement extends AppMap, HTMLStencilElement {
-  }
-  var HTMLAppMapElement: {
-    prototype: HTMLAppMapElement;
-    new (): HTMLAppMapElement;
-  };
-  interface HTMLElementTagNameMap {
-    "app-map": HTMLAppMapElement;
-  }
-  interface ElementTagNameMap {
-    "app-map": HTMLAppMapElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "app-map": JSXElements.AppMapAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppMapAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
-
-import {
-  AppRoot as AppRoot
-} from './components/app-root/app-root';
-
-declare global {
-  interface HTMLAppRootElement extends AppRoot, HTMLStencilElement {
-  }
-  var HTMLAppRootElement: {
-    prototype: HTMLAppRootElement;
-    new (): HTMLAppRootElement;
-  };
-  interface HTMLElementTagNameMap {
-    "app-root": HTMLAppRootElement;
-  }
-  interface ElementTagNameMap {
-    "app-root": HTMLAppRootElement;
-  }
-  namespace JSX {
-    interface IntrinsicElements {
-      "app-root": JSXElements.AppRootAttributes;
-    }
-  }
-  namespace JSXElements {
-    export interface AppRootAttributes extends HTMLAttributes {
-      
-    }
-  }
-}
-
 
 import {
   MapCanvas as EsriMap

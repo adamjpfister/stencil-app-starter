@@ -1,7 +1,5 @@
-exports.config = {
-};
 
-exports.devServer = {
-  root: 'www',
-  watchGlob: '**/**'
+exports.config = {
+  namespace: 'ESRI',
+  generateDistribution: true
 };

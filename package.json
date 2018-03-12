@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.1",
   "description": "Stencil App Starter",
+  "main": "dist/esri.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
   "files": [
     "dist/"
   ],
