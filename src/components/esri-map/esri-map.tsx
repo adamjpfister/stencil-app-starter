@@ -1,15 +1,16 @@
-import { Component, Element, Prop } from '@stencil/core';
+import { Component, Element, Prop, Watch } from '@stencil/core';
 import { loadModules } from 'esri-loader';
 
 
 @Component({
-  tag: 'map-canvas',
-  styleUrl: 'map-canvas.css'
+  tag: 'esri-map',
+  styleUrl: 'esri-map.css'
 })
 
 export class MapCanvas {
 
   @Element() el: HTMLElement;
+  view: any;
 
   @Prop() baseMap = 'streets';
   @Prop() zoom = '4';
@@ -34,14 +35,27 @@ export class MapCanvas {
       basemap: this.baseMap
     });
 
-    const view = new esriMapView({
+    this.view = new esriMapView({
       container: this.el,
       map: map,
       zoom: this.zoom,
       center: [this.lat, this.long]
     });
+  }
 
-    console.log(view);
+  @Watch('lat')
+  @Watch('long')
+  @Watch('zoom')
+  mapUpdate() {
+    if (this.view) {
+
+      var viewProperties = {
+        center: [this.lat, this.long],
+        zoom: this.zoom
+      };
+
+      this.view.set(viewProperties);
+    }
   }
 
 }

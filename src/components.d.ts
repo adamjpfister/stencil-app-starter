@@ -83,29 +83,29 @@ declare global {
 
 
 import {
-  MapCanvas as MapCanvas
-} from './components/map-canvas/map-canvas';
+  MapCanvas as EsriMap
+} from './components/esri-map/esri-map';
 
 declare global {
-  interface HTMLMapCanvasElement extends MapCanvas, HTMLStencilElement {
+  interface HTMLEsriMapElement extends EsriMap, HTMLStencilElement {
   }
-  var HTMLMapCanvasElement: {
-    prototype: HTMLMapCanvasElement;
-    new (): HTMLMapCanvasElement;
+  var HTMLEsriMapElement: {
+    prototype: HTMLEsriMapElement;
+    new (): HTMLEsriMapElement;
   };
   interface HTMLElementTagNameMap {
-    "map-canvas": HTMLMapCanvasElement;
+    "esri-map": HTMLEsriMapElement;
   }
   interface ElementTagNameMap {
-    "map-canvas": HTMLMapCanvasElement;
+    "esri-map": HTMLEsriMapElement;
   }
   namespace JSX {
     interface IntrinsicElements {
-      "map-canvas": JSXElements.MapCanvasAttributes;
+      "esri-map": JSXElements.EsriMapAttributes;
     }
   }
   namespace JSXElements {
-    export interface MapCanvasAttributes extends HTMLAttributes {
+    export interface EsriMapAttributes extends HTMLAttributes {
       baseMap?: string;
       lat?: number;
       long?: number;

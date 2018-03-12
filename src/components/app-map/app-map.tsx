@@ -12,11 +12,11 @@ export class AppMap {
     return [
       <ion-header>
         <ion-toolbar color="primary">
-          <ion-title>Hello Map</ion-title>
+          <ion-title>ESRI Map Web Component</ion-title>
         </ion-toolbar>
       </ion-header>,
 
-      <map-canvas base-map="streets" zoom="5"></map-canvas>
+      <esri-map base-map="streets" zoom="5"/>
     ];
   }
 }
